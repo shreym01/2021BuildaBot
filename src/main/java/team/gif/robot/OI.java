@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj2.command.button.POVButton;
 import team.gif.lib.AxisButton;
 import team.gif.robot.commands.CIMBButton;
 import team.gif.robot.commands.CIMXButton;
+import team.gif.robot.commands.NEOACommand;
 import team.gif.robot.commands.NEOCommand;
 
 
@@ -72,6 +73,7 @@ public class OI {
         dB.whenHeld(new CIMBButton());
         dX.whenHeld(new CIMXButton());
         dY.whenHeld(new NEOCommand());
+        dA.whenHeld(new NEOACommand());
     }
 
 }

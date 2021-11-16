@@ -24,13 +24,13 @@ public class NEO extends SubsystemBase {
     int stallMaxAmps = 40;
 
     public NEO(){
-    super();
-    NEO.restoreFactoryDefaults();
-    NEO.enableVoltageCompensation(12);
-    NEO.setIdleMode(CANSparkMax.IdleMode.kCoast);
-    NEO.setSmartCurrentLimit(stallMaxAmps,stallMaxAmps);
+        super();
+        NEO.restoreFactoryDefaults();
+        NEO.enableVoltageCompensation(12);
+        NEO.setIdleMode(CANSparkMax.IdleMode.kCoast);
+        NEO.setSmartCurrentLimit(stallMaxAmps,stallMaxAmps);
 
-    NEOPIDController.setOutputRange(0, 1);
+        NEOPIDController.setOutputRange(0, 1);
     }
     public void setVoltage(double voltage) {
         NEO.setVoltage(voltage);
