@@ -31,7 +31,7 @@ public class NEOACommand extends CommandBase {
     // Called once the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
-        NEO.getInstance().setVoltage(0);
+        NEO.getInstance().setPID(0);
         Globals.g_buttonControl = false;
     }
 }

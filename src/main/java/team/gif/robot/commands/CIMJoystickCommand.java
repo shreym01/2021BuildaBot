@@ -6,7 +6,7 @@ import team.gif.robot.Globals;
 import team.gif.robot.Robot;
 import team.gif.robot.subsystems.CIM;
 
-public class CIMJoystickCommand extends CommandBase {
+public class  CIMJoystickCommand extends CommandBase {
     @SuppressWarnings({"PMD.UnusedPrivateField", "PMD.SingularField"})
 
     public CIMJoystickCommand() {

@@ -4,8 +4,8 @@ public abstract class RobotMap {
 
     // ** CAN IDs **
     // Motors
-    public static final int MOTOR_TALON_ONE = 0;
-    public static final int MOTOR_SPARKMAX_ONE = 2;
+    public static final int MOTOR_TALON_ONE = 04;
+    public static final int MOTOR_SPARKMAX_ONE = 23;
 
     //pigeon when connected in CAN path
     public static final int PIGEON = 99;

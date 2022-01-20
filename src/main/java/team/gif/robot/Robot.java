@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.robot.commands.CIMJoystickCommand;
+import team.gif.robot.commands.NEOCommand;
 import team.gif.robot.subsystems.LimitSwitch;
 import team.gif.robot.subsystems.NEO;
 import team.gif.robot.subsystems.drivers.Pigeon;
@@ -37,11 +38,13 @@ public class Robot extends TimedRobot {
     // autonomous chooser on the dashboard.
     Pigeon.getInstance().addToShuffleboard("Pigeon");
     CIMCommand = new CIMJoystickCommand();
+    NEO.getInstance().getVelocity_Shuffleboard();
 
   }
 
   /**
-   * This function is called every robot packet, no matter the mode. Use this for items like
+   * This function is call
+   * ed every robot packet, no matter the mode. Use this for items like
    * diagnostics that you want ran during disabled, autonomous, teleoperated and test.
    *
    * <p>This runs after the mode specific periodic functions, but before
@@ -57,7 +60,8 @@ public class Robot extends TimedRobot {
 
     //Smart Dashboard
     SmartDashboard.putBoolean("Limit Switch", LimitSwitch.getInstance().getState());
-    NEO.getInstance().getVelocity_Shuffleboard();
+    SmartDashboard.putNumber("RPM", NEO.getInstance().getVelocity());
+    //NEO.getInstance().getVelocity_Shuffleboard();
 
 
 

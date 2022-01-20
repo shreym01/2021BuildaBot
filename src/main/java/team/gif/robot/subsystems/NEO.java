@@ -29,12 +29,16 @@ public class NEO extends SubsystemBase {
         NEO.enableVoltageCompensation(12);
         NEO.setIdleMode(CANSparkMax.IdleMode.kCoast);
         NEO.setSmartCurrentLimit(stallMaxAmps,stallMaxAmps);
+        NEOPIDController.setP(0.0007); //0.0007
+        NEOPIDController.setFF(0.000175); //0.000175
+        NEOPIDController.setOutputRange(0, 1);
 
         NEOPIDController.setOutputRange(0, 1);
     }
     public void setVoltage(double voltage) {
         NEO.setVoltage(voltage);
     }
+
 
     public double getVelocity () { return NEOEncoder.getVelocity();}
     public void setPID (double setPoint) {
